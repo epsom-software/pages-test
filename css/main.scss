@@ -963,6 +963,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	.spotlight {
 		@include vendor('align-items', 'center');
 		@include vendor('display', 'flex');
+		background: _palette(bg)
 
 		.image {
 			@include vendor('order', '1');
@@ -984,7 +985,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&:nth-child(2n) {
 			@include vendor('flex-direction', 'row-reverse');
-			opacity: 0.8;
+			opacity: 0.9;
 		}
 
 		@for $i from 1 through _misc(max-spotlights) {
@@ -992,7 +993,6 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			&:nth-child(#{$i}) {
 				//background-color: rgba(0,0,0, $j);
-				opacity: $i;
 			}
 		}
 
@@ -1246,7 +1246,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.style2 {
-			background-color: _palette(bg);
+			background-color: black;
 		}
 
 		&.style3 {
