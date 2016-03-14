@@ -963,7 +963,6 @@ $baseurl: '{{ site.baseurl }}/images';
 	.spotlight {
 		@include vendor('align-items', 'center');
 		@include vendor('display', 'flex');
-		background: _palette(bg)
 
 		.image {
 			@include vendor('order', '1');
@@ -985,14 +984,13 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&:nth-child(2n) {
 			@include vendor('flex-direction', 'row-reverse');
-			opacity: 0.9;
 		}
 
 		@for $i from 1 through _misc(max-spotlights) {
 			$j: 0.075 * $i;
 
 			&:nth-child(#{$i}) {
-				//background-color: rgba(0,0,0, $j);
+				background-color: rgba(0,0,0, $j);
 			}
 		}
 
@@ -1029,6 +1027,10 @@ $baseurl: '{{ site.baseurl }}/images';
 			.content {
 				@include padding(3em, 2em);
 			}
+		}
+
+		h2 {
+			background: white;
 		}
 	}
 
@@ -1246,7 +1248,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.style2 {
-			background-color: black;
+			background-color: _palette(bg);
 		}
 
 		&.style3 {
