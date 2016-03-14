@@ -984,13 +984,15 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&:nth-child(2n) {
 			@include vendor('flex-direction', 'row-reverse');
+			opacity: 0.8;
 		}
 
 		@for $i from 1 through _misc(max-spotlights) {
 			$j: 0.075 * $i;
 
 			&:nth-child(#{$i}) {
-				background-color: rgba(0,0,0, $j);
+				//background-color: rgba(0,0,0, $j);
+				opacity: $i;
 			}
 		}
 
